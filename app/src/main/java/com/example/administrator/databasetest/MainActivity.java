@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 values.put("price",52.00);
                 values.put("pages",578);
                 db.insert("Book",null,values);
-                Toast.makeText(MainActivity.this, "数据添加成功！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "数据添加成功！", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 ContentValues values=new ContentValues();
                 values.put("price",79);
                 db.update("Book",values,"name=?",new String[]{"Android First Code"});
-                Toast.makeText(MainActivity.this,"更新成功！",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,"更新成功！",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 SQLiteDatabase db=dbHelper.getWritableDatabase();
                 db.delete("Book","pages>?",new String[]{"500"});
-                Toast.makeText(MainActivity.this, "删除完成！", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "删除完成！", Toast.LENGTH_SHORT).show();
             }
         });
 

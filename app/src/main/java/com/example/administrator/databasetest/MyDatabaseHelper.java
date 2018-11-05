@@ -31,7 +31,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_BOOK);
         db.execSQL(CREATE_CATEGORY);
-        Toast.makeText(mContext, "创建完成！", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "创建完成！", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -39,6 +39,6 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists Book");
         db.execSQL("drop table if exists Category");
         onCreate(db);
-        Toast.makeText(mContext, "升级完成！", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "升级完成！", Toast.LENGTH_SHORT).show();
     }
 }
